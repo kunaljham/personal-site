@@ -1,6 +1,4 @@
-FROM golang:1.22-alpine AS build
-
-RUN apk add --no-cache curl
+FROM golang:1.22 AS build
 
 # Install Hugo
 RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_Linux-64bit.tar.gz | tar -xz -C /usr/local/bin
