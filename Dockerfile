@@ -1,4 +1,4 @@
-FROM golang:1.22 AS build
+FROM golang:1.25 AS build
 
 # Install Hugo
 RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_Linux-64bit.tar.gz | tar -xz -C /usr/local/bin
