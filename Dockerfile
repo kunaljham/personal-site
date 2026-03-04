@@ -8,7 +8,7 @@ COPY . .
 
 RUN hugo mod tidy
 ARG RAILWAY_PUBLIC_DOMAIN
-RUN hugo --baseURL="https://${RAILWAY_PUBLIC_DOMAIN:-www.kajham.com}"
+RUN hugo --baseURL="https://${RAILWAY_PUBLIC_DOMAIN:-kajham.com}"
 
 FROM caddy:2-alpine
 COPY --from=build /app/public /srv
